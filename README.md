@@ -1,10 +1,10 @@
 # Video-To-Pdf
 
  ## Installation
-- go get golang.org/x/image/bmp
-- go get github.com/jung-kurt/gofpdf
-- FFmpeg is required to run the application
-- go build video.go
+1. go get golang.org/x/image/bmp
+2. go get github.com/jung-kurt/gofpdf
+3. FFmpeg is required to run the application
+4. go build video.go
 
 ## How to Use
 - run the exectible with arguments <br>
