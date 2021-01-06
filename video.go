@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"strings"
 
-	"./img"
+	"github.com/Nipunwahi/Video-To-Pdf/img"
 
 	"github.com/jung-kurt/gofpdf"
 	_ "golang.org/x/image/bmp"
@@ -33,7 +33,8 @@ func comp(a, b []int) bool {
 	val := float64(float64(cnt) / float64(n))
 	return val > threshold
 }
-// Uses images to make pdf 
+
+// Uses images to make pdf
 func makePdf(n int, output string) {
 	pdf := gofpdf.New("L", "pt", "A3", "")
 	pdf.SetFont("Arial", "B", 16)
