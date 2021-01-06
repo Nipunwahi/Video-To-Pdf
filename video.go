@@ -12,7 +12,6 @@ import (
 	"strings"
 
 	"github.com/Nipunwahi/Video-To-Pdf/img"
-
 	"github.com/jung-kurt/gofpdf"
 	_ "golang.org/x/image/bmp"
 )
@@ -36,6 +35,7 @@ func comp(a, b []int) bool {
 
 // Uses images to make pdf
 func makePdf(n int, output string) {
+
 	pdf := gofpdf.New("L", "pt", "A3", "")
 	pdf.SetFont("Arial", "B", 16)
 	width := 1200
@@ -54,7 +54,9 @@ func makePdf(n int, output string) {
 		log.Fatal(err)
 	}
 }
+
 func main() {
+
 	var filename string
 	var outfile string
 	var interval int
@@ -118,7 +120,6 @@ func main() {
 			uniqFrames = append(uniqFrames, frames[i])
 		}
 	}
-	// fmt.Println(res)
 	img.SaveImages(uniqFrames, dir)
 	makePdf(len(uniqFrames), outfile)
 }
